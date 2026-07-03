@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>News Today Demo</title>
+  <style>
+    body {
+      margin: 0; padding: 20px;
+      font-family:  'Segoe UI', monospace;
+      background: #e8ebef; color: #222;
+    }
+    header {
+      text-align: center;
+      border-bottom: 3px solid #282c43;
+      padding-bottom: 10px;
+      background: #3f3d47; color: #00d900;
+    }
+    nav ul {
+      list-style: none; padding: 0; margin: 10px 0;
+      display: inline-flex; gap: 15px;
+    }
+    nav a {
+      text-decoration: none; color: #fffffe;
+      font-weight: bold;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 250px;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .leading {
+      grid-column: 1 / 2;
+      background: #fff; padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .support {
+      grid-column: 2 / 3;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .support article {
+      background: #fff; padding: 15px;
+      border: 1px solid #ccc;
+      column-count: 2;
+      column-gap: 1em;
+      text-align: justify;
+    }
+    aside {
+      grid-column: 3 / 4;
+      background: #f6f6f6; padding: 15px;
+      border-left: 4px solid #ccc;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px; padding-top: 10px;
+      border-top: 1px solid #ccc;
+    }
+    footer a { color: #2a2e4d; text-decoration: none; }
+    .byline { font-size: 0.9em; color: #ffffff; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>News Today</h1>
+    <p><time datetime="2025-06-19">June 19, 2025</time> – Hyderabad</p>
+    <nav>
+      <ul>
+        <li><a href="https://www.hindustantimes.com">Top</a></li>
+        <li><a href="https://telanganatoday.com/hyderabad">Local</a></li>
+        <li><a href="https://www.ndtv.com/world-news">World</a></li>
+        <li><a href="https://indianexpress.com/section/opinion">Opinion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="top" class="leading">
+      <header>
+        <h2>City Launches Green Spaces Initiative</h2>
+        <p class="byline">By R. Reporter • <time datetime="2025-06-19">June 19, 2025</time></p>
+      </header>
+      <p>Hyderabad city council today unveiled a plan to expand urban green spaces...</p>
+      <p>Under the initiative, 50 new parks will be built over the next five years...</p>
+      <footer>
+        <p>Tags: <a href="#">Hyderabad</a>, <a href="#">Environment</a></p>
+      </footer>
+    </article>
+
+    <section class="support">
+      <article>
+        <header><h3>Transport Strike Ends</h3></header>
+        <p>After 3 days of disruption, bus drivers reached a landmark agreement...</p>
+      </article>
+
+      <article>
+        <header><h3>Global Climate Talks Begin</h3></header>
+        <p>Diplomats from 120 countries have gathered to discuss emissions...</p>
+      </article>
+    </section>
+
+    <aside>
+      <section>
+        <h4>From the Editor</h4>
+        <ul>
+          <li><a href="https://sustainable-earth.org/green-spaces/">Why green spaces matter</a></li>
+          <li><a href="https://www.youtube.com/watch?v=stqkFjgehwI">Interview with the mayor</a></li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 News Today • <a href="#">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
