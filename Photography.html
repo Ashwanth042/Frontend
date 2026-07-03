@@ -1,0 +1,427 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Photography</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+    <style>
+        *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#2a2b2d;
+color:white;
+}
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#000000aa;
+backdrop-filter:blur(10px);
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
+
+}
+
+nav a{
+
+margin-left:30px;
+text-decoration:none;
+color:white;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:#FFD700;
+
+}
+
+.hero{
+
+height:100vh;
+
+background:url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.overlay{
+
+background:#00000088;
+padding:60px;
+text-align:center;
+border-radius:15px;
+
+}
+
+.overlay h1{
+
+font-size:60px;
+margin-bottom:20px;
+
+}
+
+.overlay p{
+
+font-size:22px;
+margin-bottom:30px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+
+}
+
+section{
+
+padding:100px 80px;
+
+}
+
+section h2{
+
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#FFD700;
+
+}
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:10px;
+transition:.5s;
+cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.08);
+
+}
+
+#about{
+
+text-align:center;
+line-height:2;
+font-size:20px;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:#222;
+padding:40px;
+border-radius:15px;
+text-align:center;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:55px;
+margin-bottom:20px;
+color:#FFD700;
+
+}
+
+.testimonial{
+
+background:#1b1b1b;
+
+}
+
+.quote{
+
+max-width:700px;
+margin:auto;
+text-align:center;
+
+}
+
+.quote p{
+
+font-size:24px;
+margin-bottom:20px;
+
+}
+
+form{
+
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+input,textarea{
+
+padding:15px;
+border:none;
+border-radius:8px;
+font-size:17px;
+
+}
+
+button{
+
+padding:15px;
+background:#FFD700;
+font-size:18px;
+border:none;
+cursor:pointer;
+border-radius:8px;
+
+}
+
+footer{
+
+background:black;
+padding:25px;
+text-align:center;
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+.overlay h1{
+
+font-size:40px;
+
+}
+
+section{
+
+padding:80px 30px;
+
+}
+
+}
+    </style>
+
+<div class="logo">
+Elite Photography
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="overlay">
+
+<h1>Capture Beautiful Moments</h1>
+
+<p>Professional Photography For Weddings, Fashion, Events & Lifestyle</p>
+
+<a href="#gallery" class="btn">View Portfolio</a>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTi3nAMgPOvNgYzRcuPdSExGZ-eVY0bNyLk3JQs1KjBQJGVzAH6eThfVuO&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT-KVNCyvtUT6iVv8XZ_VxUsTNcy0nMF03ScpOjesMELTLvCsCBR4QrXs&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTScNmcqNMKPJWhgQI4Ls0KDAP1ITkiiofwRUZgQFYR3Jo4Avuvbs8xTKhC&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gIdZLxOrhqiB-bVNeWnrJozn62e3ifjTtQenfZgzj7112FRNu8kYMk0&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6HfiLUo8PDnX8BgG6kw2pTYVEqC1a4WIIdIXnkImgeQ&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXXPWe4l12RKyGOw5Y1X2FXhYf7qC6TgDKUHEy3zfoUs-n-92E1-M1t2d4&s=10">
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+
+I'm a passionate photographer specializing in portrait,
+wedding and commercial photography.
+
+Every photo tells a unique story and I love capturing
+those unforgettable moments.
+
+</p>
+
+</section>
+
+<section id="services">
+
+<h2>Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-camera"></i>
+<h3>Portrait</h3>
+<p>Professional portrait photography.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-heart"></i>
+<h3>Wedding</h3>
+<p>Luxury wedding photography packages.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-film"></i>
+<h3>Events</h3>
+<p>Corporate and private event coverage.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="testimonial">
+
+<h2>Happy Clients</h2>
+
+<div class="quote">
+
+<p>
+"Absolutely stunning photos! Highly recommended."
+</p>
+
+<h4>- Sarah Johnson</h4>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Elite Photography
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
