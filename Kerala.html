@@ -1,0 +1,190 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala – The Green City</title>
+  <style>
+     * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height:1.6;
+      background:#f4f9f2;
+      color:#2c3e50;
+    }
+    a { color:#27ae60; text-decoration:none; }
+
+     header {
+      background:#2ecc71;
+      padding:1em 0;
+      text-align:center;
+    }
+    header h1 { color:rgb(0, 12, 91); }
+    nav ul {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      gap:1.5em;
+      margin-top:.5em;
+    }
+    nav ul li a {
+      color:white;
+      font-weight:bold;
+      transition:opacity .3s;
+    }
+    nav ul li a:hover { opacity:.8; }
+
+     .container { max-width:1000px; margin:auto; padding:2em 1em; }
+    section { margin-bottom:3em; }
+    section h2 {
+      font-size:2rem;
+      border-bottom:3px solid #27ae60;
+      padding-bottom:.3em;
+      margin-bottom:1em;
+    }
+
+     #home { text-align:center; background:url('https://source.unsplash.com/1000x400/?kerala,nature') 
+      no-repeat center/cover; color:white; padding:4em 1em; }
+    #home h2 { color:rgb(0, 0, 0); }
+    #home p { max-width:600px; margin:1em auto; background:rgba(0,0,0,0.5); padding:1em; border-radius:8px; }
+
+     .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:1.5em;}
+    .card {
+      background:white;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img { width:100%; height:150px; object-fit:cover; }
+    .card div { padding:1em; }
+    .card h3 { margin-bottom:.5em; color:#16a085; }
+    .card p { font-size:.9rem; }
+
+     form {
+      background:white;
+      padding:2em;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      max-width:600px;
+      margin:auto;
+    }
+    form label { display:block; margin-bottom:.5em; font-weight:bold; }
+    form input, form textarea {
+      width:100%;
+      padding:.75em;
+      margin-bottom:1em;
+      border:1px solid #ccc;
+      border-radius:4px;
+      font-family: inherit;
+    }
+    form button {
+      background:#27ae60;
+      color:white;
+      padding:.8em 2em;
+      border:none;
+      border-radius:4px;
+      cursor:pointer;
+      font-size:1rem;
+    }
+    form button:hover { background:#219150; }
+
+     footer {
+      text-align:center;
+      padding:1em 0;
+      background:#ecf0f1;
+      font-size:.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kerala – The Green City</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#attractions">Attractions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section id="home">
+    <h2>Welcome to Kerala</h2>
+    <p>Discover the lush landscapes, eco‑innovations, and sustainable heart of India's greenest state.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Kerala</h2>
+    <p>Kerala, located on the southwestern coast of India, is known for its lush greenery, tranquil backwaters, rich cultural heritage, and high literacy rate. Often referred to as "God's Own Country," Kerala boasts a unique blend of natural beauty and vibrant traditions. The state is famous for its network of interconnected rivers, lagoons, and canals that form the scenic backwaters, drawing tourists from around the world. It is also known for its classical arts, Ayurveda treatments, and delicious cuisine, which includes coconut-rich curries and seafood. Kerala's population enjoys one of the highest human development indices in India, with strong emphasis on education and healthcare. With a tropical climate, diverse wildlife, and picturesque hill stations like Munnar and Wayanad, Kerala is a popular destination for nature lovers and cultural explorers alike.</p>
+   </section>
+
+  <section id="attractions">
+    <h2>Green Attractions</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="C:\Users\ashwa\Downloads\Athirappilly.jpg" alt="Athirappilly Falls"/>
+        <div>
+          <h3>Athirappilly Water Falls</h3>
+          <p>Athirappilly Falls, located in Kerala's Thrissur district, is the largest waterfall in the state. Known as the "Niagara of India," it drops from 80 feet amidst lush greenery, attracting nature lovers and tourists alike.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="C:\Users\ashwa\Downloads\bird.jpg" alt="Thattekkad Bird Sanctuary"/>
+        <div>
+          <h3>Thattekkad Bird Sanctuary</h3>
+          <p>Thattekkad Bird Sanctuary, spread along the banks of the Periyar River in Kerala, is India's first designated bird sanctuary. It's a haven for birdwatchers, with over 300 species—both resident and migratory—thriving amid dense evergreen forests and tranquil waterways.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="C:\Users\ashwa\Downloads\eco.jpg" alt="Thenmala Eco‑Tourism"/>
+        <div>
+          <h3>Thenmala Eco‑Tourism</h3>
+          <p> Thenmala Eco‑Tourism, nestled in Kerala's Western Ghats, is India’s first planned eco-tourism destination—offering serene forest trails, bamboo rafting on Neyyar Lake, and a canopy walkway amidst lush greenery.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="C:\Users\ashwa\Downloads\park.jpg" alt="Silent Valley"/>
+        <div>
+          <h3>Silent Valley National Park</h3>
+          <p> Silent Valley National Park, located in Kerala’s Nilgiri Hills, is a pristine tropical rainforest known for its rich biodiversity and rare species like the lion-tailed macaque. It's one of the most ecologically significant areas in India.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="C:\Users\ashwa\Downloads\Marari-beach.jpg" alt="Marari beach"/>
+        <div>
+          <h3>Marari Beach</h3>
+         <p>Marari Beach, located in Mararikulam village in Kerala's Alappuzha district, is a tranquil coastal retreat known for its serene ambiance and natural beauty. Often referred to as one of the world's top hammock beaches, it offers a peaceful alternative to Kerala's more commercialized shores </p>        </div>
+      </div>
+      <div class="card">
+        <img src="C:\Users\ashwa\Downloads\temple.jpg" alt="Sree Padmanabhaswamy Temple"/>
+        <div>
+          <h3>Sree Padmanabhaswamy Temple</h3>
+ <p>Sree Padmanabhaswamy Temple, located in Thiruvananthapuram, Kerala, is a famous Hindu temple dedicated to Lord Vishnu, depicted in a reclining posture on the serpent Anantha. Known for its stunning Dravidian architecture and immense wealth, it is one of the 108 Divya Desams and a major spiritual and cultural landmark in India.</p>      </div>
+  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Kerala Green City • Built for eco‑enthusiasts
+</footer>
+</body>
+</html>

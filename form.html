@@ -1,0 +1,231 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step Registration Form</title>
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
+    .progress-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .progress-bar div {
+      width: 20%;
+      height: 5px;
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+    .progress-bar .active {
+      background-color: #4CAF50;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .input-group input:focus,
+    .input-group select:focus {
+      border-color: #4CAF50;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button[type="button"] {
+      background-color: #f44336;
+      color: white;
+    }
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Register</h1>
+    <form id="regForm">
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+
+      <!-- Step 1: Personal Information -->
+      <div class="tab active" id="step1">
+        <h2>Personal Information</h2>
+        <div class="input-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="input-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="input-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+      </div>
+
+      <!-- Step 2: Contact Information -->
+      <div class="tab" id="step2">
+        <h2>Contact Information</h2>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="input-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+      </div>
+
+      <!-- Step 3: Account Setup -->
+      <div class="tab" id="step3">
+        <h2>Account Setup</h2>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+      </div>
+
+      <!-- Step 4: Preferences -->
+      <div class="tab" id="step4">
+        <h2>Preferences</h2>
+        <div class="input-group">
+          <label for="newsletter">Subscribe to Newsletter</label>
+          <select id="newsletter" name="newsletter" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required> I agree to the Terms and Conditions
+          </label>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="button-group">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    let currentTab = 0;
+
+    function showTab(n) {
+      const tabs = document.querySelectorAll('.tab');
+      const steps = document.querySelectorAll('.progress-bar .step');
+      tabs[n].classList.add('active');
+      steps[n].classList.add('active');
+
+      if (n === 0) {
+        document.getElementById('prevBtn').style.display = 'none';
+      } else {
+        document.getElementById('prevBtn').style.display = 'inline';
+      }
+
+      if (n === (tabs.length - 1)) {
+        document.getElementById('nextBtn').innerHTML = 'Submit';
+      } else {
+        document.getElementById('nextBtn').innerHTML = 'Next';
+      }
+    }
+
+    function nextPrev(n) {
+      const tabs = document.querySelectorAll('.tab');
+      if (n === 1 && !validateForm()) return false;
+      tabs[currentTab].classList.remove('active');
+      const steps = document.querySelectorAll('.progress-bar .step');
+      steps[currentTab].classList.remove('active');
+      currentTab = currentTab + n;
+      if (currentTab >= tabs.length) {
+        document.getElementById('regForm').submit();
+        return false;
+      }
+      showTab(currentTab);
+    }
+
+    function validateForm() {
+      const inputs = document.querySelectorAll('.tab.active input');
+      let valid = true;
+      inputs.forEach(input => {
+        if (!input.value) {
+          input.style.borderColor = 'red';
+          valid = false;
+        } else {
+          input.style.borderColor = '';
+        }
+      });
+      return valid;
+    }
+
+    showTab(currentTab);
+  </script>
+
+</body>
+</html>
